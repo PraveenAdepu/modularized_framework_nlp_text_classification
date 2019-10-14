@@ -13,9 +13,6 @@ Constraints	: Many ways to build frameworks design, try to simplify as much as p
 	 |-->src.generate_cv_folds.py
 	 |-->src.pipeline_manager.py
 	 |-->trained_models/__all__ & image provided from local run
-## Pipeline
-
-![alt text](https://github.com/PraveenAdepu/modularized_framework_nlp_text_classification/framework_pipeline.png)
 	 
 ## Acknowledgments
 
