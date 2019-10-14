@@ -1,0 +1,57 @@
+project: NLP text multilabel classification
+
+name: NLP generic framework
+tags: [version_0.1]
+
+exclude:
+  - output
+  - .csv
+  - .git
+  - .github
+
+parameters:
+# Data
+  train_filepath:                  .\data\train.csv
+  test_filepath:                   .\data\test.csv
+  
+  id_feature_name:                 id
+  cv_feature_name:                 CVindices
+  target_feature_names:            ['toxic','severe_toxic','obscene','threat','insult','identity_hate']
+
+  non_feature_names:               ['id' , 'CVindices']
+  pipeline_name:                   CNNGRU #baseline #CNN2D #BiLSTM 
+  model_train:                     True
+  model_predict:                   True
+
+# Cross validation
+  generate_cv_folds: True
+  stratified_cv: True
+  cross_validation_folds: 5
+  model_cross_validation_fold: 5
+  
+# Embeddings
+  EMBEDDING_FILE: .\pretrained_models\GoogleNews-vectors-negative300.bin
+  MAX_SEQUENCE_LENGTH: 100
+  MAX_NB_WORDS: 200000
+  EMBEDDING_DIM: 300
+  MODEL_WEIGHTS_FILE: model_weights.h5
+
+# Model run parameters
+  nb_epoch: 2
+  verbose: 1
+  batch_size: 256
+  patience: 2
+  learning_rate: 0.001
+
+# Execution
+
+# Preprocessing
+
+# Feature Extraction
+
+# Feature Selection
+
+
+   
+   
+ 
